@@ -1,0 +1,24 @@
+<h1> SE VE LOS RANDOM</h1>
+<button (click)="generarNumeros()">
+    generar Numeros
+</button>
+
+<ul>
+    <li *ngFor="let num of numeros" [ngClass]="{
+        verde: num % 2 == 0,
+        rojo: num % 2 == 1
+    }">
+        {{num}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let num of numeros" [class.verde]="num % 2 == 0" [class.rojo]="num % 2 == 1">
+        {{num}}
+    </li>
+</ul>
+<ul>
+    <li *ngFor="let num of numeros" [style.color]="num % 2 == 0 ? 'green' : 'red'">
+        {{num}}
+    </li>
+</ul>

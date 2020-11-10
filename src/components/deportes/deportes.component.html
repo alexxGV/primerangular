@@ -1,0 +1,29 @@
+<h1>Ejemplo direcctivas Angular</h1>
+<h3>Numero de deportes {{sports.length}}</h3>
+
+<!-- Realizamos un if con direcctiva -->
+<div *ngIf="sports.length <= 7; then deportesMenor7; else deportesMayor7">
+</div>
+
+<h4 style="color: red;">
+    El primer deporte es {{sports[0]}}
+</h4>
+
+<!-- BUCLE each-->
+<ul>
+    <li *ngFor="let deporte of sports; let i = index">
+        Posicion {{i}}, {{deporte}}
+    </li>
+</ul>
+
+<ng-template #deportesMayor7>
+    <h2 style="color: blue;">
+        Tenemos más de 7 deportes
+    </h2>
+</ng-template>
+
+<ng-template #deportesMenor7>
+    <h2 style="color: blue;">
+        Tenemos menos de 7 deportes
+    </h2>
+</ng-template>
