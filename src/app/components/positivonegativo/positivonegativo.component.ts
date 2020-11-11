@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: "app-positivo-negativo0",
-    templateUrl: "./positivonegativo0.component.html",
-    styleUrls: []
+    selector: "app-positivo-negativo",
+    templateUrl: "./positivonegativo.component.html",
+    styleUrls: ["./positivonegativo.component.css"]
 })
 
-export class PositivoNegativo0 {
+export class PositivoNegativo {
     public numeros: Array<number>;
 
     constructor() {
